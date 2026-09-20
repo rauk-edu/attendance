@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firestore-blueprint.json",
+  "entities": {
+    "Attendance": {
+      "collection": "attendance",
+      "description": "Daily staff attendance records indexed by date YYYY-MM-DD",
+      "fields": {
+        "date": { "type": "string", "description": "Date string in YYYY-MM-DD format" },
+        "records": { "type": "map", "description": "Map of staff name to attendance log entry" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" }
+      }
+    },
+    "Document": {
+      "collection": "documents",
+      "description": "Official school administrative letters, leave requests, and teacher absence incident records",
+      "fields": {
+        "title": { "type": "string", "description": "Title of the document or record" },
+        "category": { "type": "string", "description": "Category: leave_request, mission_letter, absence_record, holiday_notice, official_letter" },
+        "staffName": { "type": "string", "description": "Associated staff member name if applicable" },
+        "date": { "type": "string", "description": "Effective date of document" },
+        "referenceNumber": { "type": "string", "description": "Official letter reference number" },
+        "content": { "type": "string", "description": "Body text or explanation of absence/letter" },
+        "status": { "type": "string", "description": "Status: pending, approved, resolved, archived" },
+        "fileAttachmentUrl": { "type": "string", "description": "Optional base64 attachment or document link" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "description": "Last updated timestamp" },
+        "createdBy": { "type": "string", "description": "User or creator name" }
+      }
+    },
+    "HolidayNotice": {
+      "collection": "holiday_notices",
+      "description": "AI-generated or official school closure and holiday announcements for students and parents",
+      "fields": {
+        "holidayName": { "type": "string", "description": "Name of public holiday or school closure event" },
+        "startDate": { "type": "string", "description": "Holiday start date YYYY-MM-DD" },
+        "endDate": { "type": "string", "description": "Holiday end date YYYY-MM-DD" },
+        "reopenDate": { "type": "string", "description": "School resumption date YYYY-MM-DD" },
+        "targetAudience": { "type": "string", "description": "Target audience (students, teachers, general)" },
+        "generatedTitle": { "type": "string", "description": "Formal notice title" },
+        "generatedNotice": { "type": "string", "description": "Full formal Khmer notice text" },
+        "status": { "type": "string", "description": "draft or published" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Attendance records by date
+    match /attendance/{dateStr} {
+      allow read, write: if true;
+    }
+
+    // School administrative documents and teacher absence incident records
+    match /documents/{docId} {
+      allow read, write: if true;
+    }
+
+    // Official announcements and AI-assisted holiday school closure notices
+    match /holiday_notices/{noticeId} {
+      allow read, write: if true;
+    }
+  }
+}

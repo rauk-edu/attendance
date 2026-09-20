@@ -1,0 +1,10 @@
+{
+  "name": "ប្រព័ន្ធគ្រប់គ្រងវត្តមានបុគ្គលិក - សាលាបឋមសិក្សា រោគ",
+  "description": "ប្រព័ន្ធគ្រប់គ្រងវត្តមានបុគ្គលិកអប់រំ សាលាបឋមសិក្សា រោគ ជាមួយ Cloud Firestore, ការចុះហត្ថលេខាឌីជីថល, ទីតាំង GPS, ជូនដំណឹងតាម Browser Push Notification & Telegram ជូនរដ្ឋបាលភ្លាមៗពេលមានការចុះវត្តមានឬកែប្រែទិន្នន័យ, ផ្ទុកឯកសារគ្រូអវត្តមាន និងជំនួយការ AI សរសេរសេចក្តីជូនដំណឹង",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

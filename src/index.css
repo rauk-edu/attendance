@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+  }
+}
+
+/* Custom print styles for A4 Landscape official documents */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 8pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  #att-print-wrapper {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 2mm 3mm !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 7.5pt !important;
+    table-layout: fixed !important;
+    page-break-inside: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    height: 16pt !important;
+  }
+
+  th {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+    border: 0.75pt solid #000 !important;
+    padding: 2pt 1pt !important;
+    font-size: 7.5pt !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  td {
+    border: 0.75pt solid #000 !important;
+    padding: 1pt 1.5pt !important;
+    font-size: 7.5pt !important;
+    color: #000 !important;
+    vertical-align: middle !important;
+    word-wrap: break-word !important;
+    line-height: 1.1 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  tbody tr:nth-child(even) td {
+    background-color: #f8fafc !important;
+  }
+
+  .att-sig-container {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-height: 15pt !important;
+    height: 15pt !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2pt !important;
+  }
+
+  .att-sig-placeholder {
+    display: none !important;
+  }
+
+  .att-sig-img {
+    display: inline-block !important;
+    max-height: 14pt !important;
+    max-width: 40pt !important;
+    width: auto !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+
+  .att-sig-time {
+    font-size: 6.5pt !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    margin: 0 !important;
+  }
+
+  td input {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: 7.5pt !important;
+    color: #000 !important;
+    text-align: inherit !important;
+    box-shadow: none !important;
+  }
+
+  td input::placeholder {
+    color: transparent !important;
+  }
+
+  .day-off-col {
+    background-color: #e2e8f0 !important;
+    color: #475569 !important;
+  }
+}
+
+.moul-regular {
+  font-family: 'Moul', cursive;
+}
